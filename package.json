@@ -1,0 +1,21 @@
+{
+  "name": "nostr-outbox",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "develop": "webpack-dev-server --mode development",
+    "build" : "webpack --mode production"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@nostr-dev-kit/ndk": "^1.2.1",
+    "express": "^4.18.2",
+    "nostr-tools": "^1.15.0",
+    "redis": "^4.6.8",
+    "websocket-polyfill": "^0.0.3"
+  }
+}

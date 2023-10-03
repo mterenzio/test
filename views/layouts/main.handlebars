@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Example App</title>
+    <script type="module" src="dist/bundle.js"></script>
+<script type="module">
+    const nip07signer = new NDKNip07Signer();
+    const ndk = new NDK({ signer: nip07signer });
+    nip07signer.user().then(async (user) => {
+    if (!!user.npub) {
+        console.log("Permission granted to read their public key:", user.npub);
+    } else {
+        console.log("Permission denied to read their public key");
+    }
+    });
+</script>
+</head>
+<body>
+
+    {{{body}}}
+
+</body>
+</html>
